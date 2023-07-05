@@ -11,5 +11,21 @@ export default defineConfig({
       ],
     },
   },
-  plugins: [vue()],
+  plugins: [vue(
+      {
+        template: {
+          compilerOptions: {
+            isCustomElement: (tag) => tag.startsWith('emoji-music-recaptcha')
+          }
+        }
+      }
+  ),],
+  build: {
+    lib: {
+      entry: './src/main.ts',
+      name: 'emoji-music-recaptcha',
+      // the proper extensions will be added
+      fileName: 'emoji-music-recaptcha'
+    }
+  }
 })
