@@ -1,7 +1,23 @@
-# Vue 3 + Vite
+# emoji-music-captcha
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+![img.png](img.png)
 
-## Recommended IDE Setup
+Виджет отгадывания музыки по эмоджи знакам.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Этот веб-компонент на Vue был сделан в шутку, он не представляет собой боевой recaptcha виджет, т.к. у него нет 
+блокировки, а это уже требуется реализация по бэку, к тому же нужно проводить исследования и отбор эмоджи строк 
+(некоторые отгадать сложновато). Есть и другие проблемы у данного подхода, но в наше время любую капчу отгадать сложно.
+
+## Как юзать?
+
+В dist компилируется готовый продукт в виде веб-компонентов, размещаем скрипты и ассеты из dist. Затем используем 
+кастомные теги
+
+```html
+<emoji-music-recaptcha>Здесь будет код виджета</emoji-music-recaptcha>
+<emoji-secret>Здесь будет эмоджи секрет</emoji-secret>
+```
+
+## События
+- `captchaReload` - Перезапуск после неудачной попытки (обновление секрета)
+- `captchaValidate` - Валидация с булевой переменной ошибки

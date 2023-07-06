@@ -1,4 +1,6 @@
-:root {
+@import 'vue-select.pcss';
+
+:root, :host {
   --select-border: #777;
   --select-focus: blue;
   --select-arrow: var(--select-border);
@@ -109,7 +111,7 @@ button:focus-visible {
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
+  :root, :host {
     color: #213547;
     background-color: #ffffff;
   }
@@ -122,7 +124,7 @@ button:focus-visible {
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root, :host {
     color: #ffffff;
   }
   a:hover {

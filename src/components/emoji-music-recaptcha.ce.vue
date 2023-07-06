@@ -4,12 +4,13 @@ import vSelect                                  from "vue-select";
 
 import { Ref, ref, onMounted } from 'vue';
 
-
 const props = withDefaults(defineProps<{
   dark: boolean
 }>(), {
   dark: false
 })
+
+const emit = defineEmits(['captchaValidate', 'captchaReload']);
 
 function getMultipleRandom(arr, num) {
   const shuffled = [...arr].sort(() => 0.5 - Math.random());
@@ -29,30 +30,34 @@ const emr = ref()
 const valid = ref(false)
 const error = ref(false)
 
-const event = new CustomEvent('captchaValid', {
-  detail: {
-    answer: correctItem.value
-  }
+
+onMounted(() => {
+  window.localStorage.setItem('emoji-secret', correctItem.value.emoji)
 })
 
 function generateRandomQuestions() {
   randomItems.value = getMultipleRandom(EmojiDictionary, 4)
   correctItem.value = randomItems.value[Math.floor(Math.random()*randomItems.value.length)]
   selected.value = randomItems.value[0]
+
+  window.localStorage.setItem('emoji-secret', correctItem.value.emoji)
 }
 
 function triggerValid() {
   if (selected.value.code === correctItem.value.code) {
     valid.value = true
-    emr.value.dispatchEvent(event);
   } else {
     error.value = true
   }
+
+  emit('captchaValidate', error.value)
 }
 
 function reload() {
   error.value = false
   generateRandomQuestions()
+
+  emit('captchaReload')
 }
 
 
@@ -92,6 +97,5 @@ function reload() {
 </template>
 
 <style lang="postcss">
-@import 'vue-select/dist/vue-select.css';
 @import '../style.pcss';
 </style>

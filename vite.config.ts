@@ -13,14 +13,19 @@ export default defineConfig({
   },
   plugins: [vue(
       {
+        customElement: true,
         template: {
           compilerOptions: {
-            isCustomElement: (tag) => tag.startsWith('emoji-music-recaptcha')
+            isCustomElement: (tag) => tag.startsWith('emoji-')
           }
         }
       }
   ),],
   build: {
+    rollupOptions: {
+      // Externalize deps that shouldn't be bundled into the library.
+      external: ['vue'],
+    },
     lib: {
       entry: './src/main.ts',
       name: 'emoji-music-recaptcha',
