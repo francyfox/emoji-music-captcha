@@ -1,8 +1,16 @@
 {
   "name": "@francyfox/emoji-music-captcha",
   "private": false,
+  "author": "hellisart <7info7web@gmail.com>",
+  "license": "MIT",
   "version": "1.0.0",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "src/"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
