@@ -11,7 +11,6 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -79,6 +78,22 @@ button:focus-visible {
     }
   }
 }
+body.dark .emr {
+  &.dark {
+    color: #f0f0f0;
+    box-shadow: 0 0 0 1px rgba(222, 222, 222, 0.16);
+
+    --vs-selected-color: #f0f0f0;
+    --vs-border-color:#f0f0f0;
+    --vs-controls-color: #f0f0f0;
+    --vs-dropdown-bg: rgb(57, 57, 59);
+
+    button {
+      color: #fff;
+      background: #d36e3b;
+    }
+  }
+}
 
 .emr--form {
   margin-bottom: 5px;
@@ -113,7 +128,6 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root, :host {
     color: #213547;
-    background-color: #ffffff;
   }
   a:hover {
     color: #747bff;

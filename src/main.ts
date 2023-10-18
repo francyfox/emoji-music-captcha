@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 import { defineCustomElement } from 'vue'
-import EmojiMusicRecaptcha     from "./components/emoji-music-recaptcha.ce.vue";
+import EmojiMusicRecaptcha     from './components/emoji-music-recaptcha.ce.vue';
 import EmojiSecret             from './components/emoji-secret.ce.vue';
 
 const EmojiMusicRecaptchaElement = defineCustomElement(EmojiMusicRecaptcha)

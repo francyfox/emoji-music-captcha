@@ -12,12 +12,6 @@ export const EmojiDictionary: EmojiDictionaryItem[] = [
         track: '115417954'
     },
     {
-        code: 2,
-        label: 'Fat Bottomed Girls',
-        emoji: '💁‍♀️🍑',
-        track: '221560013'
-    },
-    {
         code: 3,
         label: 'Bicycle Race',
         emoji: '🚴‍♀️🚴‍♀️🚴‍♀️',

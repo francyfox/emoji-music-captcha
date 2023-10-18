@@ -22,10 +22,10 @@ export default defineConfig({
       }
   ),],
   build: {
-    rollupOptions: {
-      // Externalize deps that shouldn't be bundled into the library.
-      external: ['vue'],
-    },
+    // rollupOptions: {
+    //   // Externalize deps that shouldn't be bundled into the library.
+    //   external: ['vue'],
+    // },
     lib: {
       entry: './src/main.ts',
       name: 'emoji-music-recaptcha',

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { EmojiDictionary, EmojiDictionaryItem } from './emoji.dictionary';
-import vSelect                                  from "vue-select";
+import vSelect from 'vue-select';
 
 import { Ref, ref, onMounted } from 'vue';
 
@@ -86,12 +86,12 @@ function reload() {
 
     <div class="emr--success" v-if="valid">
       Ура! Нападение скайнет отменяется! Вы же человек верно?
-      <img src="/leo.gif" width="200" height="200">
+      <img src="/leo.gif" width="200" height="200" alt="leo">
     </div>
 
     <div class="emr--error" v-if="error">
       Скоро брат, скоро. <a href="#" @click.prevent="reload">Повторить попытку</a>
-      <img src="/buginator.gif" width="200" height="136">
+      <img src="/buginator.gif" width="200" height="136" alt="terminator">
     </div>
   </div>
 </template>
