@@ -4,8 +4,8 @@ import EmojiSecret from './components/emoji-secret.ce.vue'
 </script>
 
 <template>
-  <emoji-secret />
   <emoji-music-recaptcha/>
+  <emoji-secret />
 </template>
 
 <style scoped>
