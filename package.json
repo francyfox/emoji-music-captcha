@@ -9,7 +9,7 @@
     "access": "public"
   },
   "files": [
-    "src/"
+    "dist/"
   ],
   "scripts": {
     "dev": "vite",
