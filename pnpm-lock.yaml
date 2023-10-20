@@ -17,6 +17,9 @@ dependencies:
   vue-select:
     specifier: 4.0.0-beta.6
     version: 4.0.0-beta.6(vue@3.3.4)
+  wavesurfer.js:
+    specifier: ^7.3.9
+    version: 7.3.9
 
 devDependencies:
   '@vitejs/plugin-vue':
@@ -533,3 +536,7 @@ packages:
       '@vue/runtime-dom': 3.3.4
       '@vue/server-renderer': 3.3.4(vue@3.3.4)
       '@vue/shared': 3.3.4
+
+  /wavesurfer.js@7.3.9:
+    resolution: {integrity: sha512-tB6HhBvNrReTWyzIAqa7f025pGmlv0At9b6Z+zSf3cBbSSi/hCN0yNB5mTS8RkXkabyrbrOiRb1lOJUqQRK4hQ==}
+    dev: false

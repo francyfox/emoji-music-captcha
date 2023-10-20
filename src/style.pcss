@@ -49,7 +49,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #000000;
 }
 button:focus,
 button:focus-visible {
@@ -57,11 +57,13 @@ button:focus-visible {
 }
 
 .emr {
+  position: relative;
   width: 100%;
   max-width: 420px;
   padding: 0.8em;
   border-radius: 3px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.16);
+  box-sizing: border-box;
 
   &.dark {
     color: #f0f0f0;
@@ -76,6 +78,16 @@ button:focus-visible {
       color: #fff;
       background: #d36e3b;
     }
+  }
+
+  iframe {
+    display: none;
+  }
+
+  .player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 }
 body.dark .emr {
@@ -130,10 +142,15 @@ body.dark .emr {
     color: #213547;
   }
   a:hover {
-    color: #747bff;
+    color: #ff2c2c;
   }
   button {
-    background-color: #f9f9f9;
+    color: #eee7e7;
+    background-color: #dc4e4e;
+
+    svg path {
+      fill: #eee7e7;
+    }
   }
 }
 
