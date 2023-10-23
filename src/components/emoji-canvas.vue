@@ -18,18 +18,7 @@ watch(() => props.data, async () => {
     const response = (await fetch(props.data))
     await draw(response)
   } catch (e) {
-    console.log(e)
-    alert('Something went wrong! Oops! Wtf soundcloud')
-  }
-})
-
-watch(() => props.dark, async () => {
-  try {
-    const response = (await fetch(props.data))
-    await draw(response)
-  } catch (e) {
-    console.log(e)
-    alert('Something went wrong! Oops! Wtf soundcloud')
+    console.log(`Something went wrong! Oops! Wtf soundcloud \n ${e}`)
   }
 })
 
